@@ -16,20 +16,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        RetrofitBuilder.getService()?.getWeather("Bishkek", getString(R.string.api_key))
-            ?.enqueue(object : Callback<CurrentWeather> {
+        RetrofitBuilder.getService()
+            ?.getWeather("Bishkek", getString(R.string.api_key))
+            ?.enqueue(object : Callback<CurrentWeather>{
+                override fun onFailure(call: Call<CurrentWeather>, t: Throwable) {
+                    Log.d("asd","Fail")
+                }
 
                 override fun onResponse(
                     call: Call<CurrentWeather>,
                     response: Response<CurrentWeather>
                 ) {
-                    if (response.isSuccessful&&response.body()!= null){
-                        val data = response.body()
-                        tv1.text = data?.main?.temp.toString()
-                    }
-                }
-                override fun onFailure(call: Call<CurrentWeather>, t: Throwable) {
-                    Log.d("test","nope")
+                    Log.d("asd","Ok")
                 }
 
             })

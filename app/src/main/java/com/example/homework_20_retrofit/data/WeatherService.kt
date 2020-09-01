@@ -9,9 +9,7 @@ interface WeatherService {
 
 
     @GET("data/2.5/weather")
-
-    fun getWeather(@Query("q")city :String,
-                   @Query("appid")appId :String ): Call<CurrentWeather>
+    fun getWeather(@Query("q") city:String,@Query("appid")appId :String ): Call<CurrentWeather>
 
 }
 
