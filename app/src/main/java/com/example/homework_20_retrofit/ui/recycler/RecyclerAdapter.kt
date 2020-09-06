@@ -38,7 +38,9 @@ class RecyclerAdapter : RecyclerView.Adapter<RvHolder>() {
 
 class RvHolder(v:View) : RecyclerView.ViewHolder(v){
     fun bind(forecastItem: ForecastItem) {
-        itemView.tv_recycler.text = forecastItem.main.temp.toString()
+        itemView.tv_week_temp.text = forecastItem.main.temp.toString()
+        itemView.temp_recycler_max.text = forecastItem.main.temp_max.toString()
+        itemView.temp_recycler_min.text = forecastItem.main.temp_min.toString()
 
     }
 }
