@@ -1,4 +1,4 @@
-package com.example.homework_20_retrofit.data.model
+package com.example.homework_20_retrofit.data.model.current
 
 import com.google.gson.annotations.SerializedName
 
@@ -14,10 +14,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 
-data class Weather (
+data class Coord (
 
-	@SerializedName("id") val id : Int,
-	@SerializedName("main") val main : String,
-	@SerializedName("description") val description : String,
-	@SerializedName("icon") val icon : String
+	@SerializedName("lon") val lon : Double,
+	@SerializedName("lat") val lat : Double
 )

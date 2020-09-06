@@ -198,13 +198,12 @@
                 app:layout_constraintStart_toStartOf="@+id/temp_now_block"
                 app:layout_constraintTop_toBottomOf="@+id/temp_now_block" />
 
-            <TextView
+            <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/carbon"
-                android:text="@string/here_could_be_the_recycler_view"
-                android:textColor="@android:color/black"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintBottom_toTopOf="@id/left_char"
                 app:layout_constraintStart_toStartOf="@id/this_week"
                 app:layout_constraintTop_toBottomOf="@id/this_week" />

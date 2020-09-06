@@ -1,4 +1,4 @@
-package com.example.homework_20_retrofit.data.model
+package com.example.homework_20_retrofit.data.model.current
 
 import com.google.gson.annotations.SerializedName
 
